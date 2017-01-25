@@ -1,0 +1,306 @@
+{
+  "areas": [
+    {
+      "avZone": "MAIN", 
+      "longName": "A/V Area", 
+      "shortName": "1", 
+      "takesAVInputs": true,
+      "tv" : {
+        "address" : "192.168.0.xxx",
+        "port" : 50000,
+        "type" : "ip_serial",
+        "On" : "k a 01\r\nx b 90\r\n",
+        "Off" : "k a 00\r\n"
+      }
+    }, 
+    {
+      "avZone": "ZONE2", 
+      "controls": [
+        {
+          "id": "bonus_room_lock", 
+          "indicatorMap": [
+            {
+              "color": "#00ff00", 
+              "key": true, 
+              "text": "Locked"
+            }, 
+            {
+              "color": "#ff0000", 
+              "key": false, 
+              "text": "Unlocked"
+            }
+          ], 
+          "mechanism": "smartthings", 
+          "name": "Door Lock"
+        }, 
+        {
+          "id": "bonus_room_outside_light", 
+          "mechanism": "smartthings", 
+          "name": "Outside Light"
+        }
+      ], 
+      "longName": "Bonus Room", 
+      "shortName": "2", 
+      "takesAVInputs": true
+    }, 
+    {
+      "controls": [
+        {
+          "id": "upstairs_sliding_door_lights", 
+          "indicatorMap": [
+            {
+              "color": "#ff0000", 
+              "key": "#ff0000", 
+	      "payload": {
+                "on": true,
+                "effect": "none",
+                "hue": 0,
+                "bri": 252,
+                "sat": 255
+	      },
+              "text": "Red"
+            }, 
+            {
+              "color": "#ff9966", 
+              "key": "#ff9966", 
+	      "payload": {
+                "on": true,
+                "effect": "none",
+                "hue": 3500,
+                "bri": 252,
+                "sat": 255
+	      },
+              "text": "Orange"
+            }, 
+            {
+              "color": "#ff9900", 
+              "key": "#ff9900", 
+	      "payload": {
+                "on": true,
+                "effect": "none",
+                "hue": 9000,
+                "bri": 252,
+                "sat": 255
+	      },
+              "text": "Yellow"
+            }, 
+            {
+              "color": "#00ff00", 
+              "key": "#00ff00", 
+	      "payload": {
+                "on": true,
+                "effect": "none",
+                "hue": 22000,
+                "bri": 252,
+                "sat": 255
+	      },
+              "text": "Green"
+            }, 
+            {
+              "color": "#00ffff", 
+              "key": "#00ffff", 
+	      "payload": {
+                "effect": "none",
+                "on": true,
+                "hue": 33000,
+                "bri": 252,
+                "sat": 255
+	      },
+              "text": "Cyan"
+            },
+            {
+              "color": "#0000ff", 
+              "key": "#0000ff", 
+	      "payload": {
+                "on": true,
+                "effect": "none",
+                "hue": 44000,
+                "bri": 252,
+                "sat": 255
+	      },
+	      "textcolor": "#ffffff",
+              "text": "Blue"
+            }, 
+            {
+              "color": "#6600ff", 
+              "key": "#6600ff", 
+	      "payload": {
+                "on": true,
+                "effect": "none",
+                "hue": 48000,
+                "bri": 252,
+                "sat": 255
+	      },
+	      "textcolor": "#ffffff",
+              "text": "Purple"
+            }, 
+            {
+              "color": "#ffffff", 
+              "key": "#ffffff", 
+	      "payload": {
+                "effect": "none",
+                "on": true,
+                "hue": 0,
+                "bri": 252,
+                "sat": 0
+	      },
+              "text": "White"
+            },
+            {
+              "color": "#f9f3ed", 
+              "key": "#f9f3ed", 
+	      "payload": {
+                "effect": "none",
+                "on": true,
+                "hue": 5485,
+                "bri": 252,
+                "sat": 227
+	      },
+              "text": "Warm White"
+            },
+            {
+              "color": "#ffffff", 
+              "key": "#fffffe", 
+	      "payload": {
+                "effect": "colorloop",
+                "on": true,
+                "hue": 0,
+                "bri": 255,
+                "sat": 255
+	      },
+              "text": "Gamma Fade"
+            },
+            {
+              "color": "#ff9901", 
+              "key": "#ff9901", 
+	      "payload": {
+                "on": true,
+                "hue": 3500,
+                "bri": 252,
+                "sat": 255,
+		"effect": "none",
+                "pattern": [
+                  {"on":true},
+		  {"on":false},
+		  {"on":false}
+		]
+	      },
+              "text": "Halloween"
+            }, 
+            {
+              "color": "#009900", 
+              "key": "#009900", 
+	      "payload": {
+                "on": true,
+                "hue": 0,
+                "bri": 252,
+                "sat": 255,
+		"effect": "none",
+                "pattern": [
+                  {"on":true},
+		  {"on":false},
+		  {"on":true, "hue": 22000},
+		  {"on":false}
+		]
+	      },
+              "text": "Christmas"
+            }, 
+            {
+              "color": "#000099", 
+              "key": "#000099", 
+	      "payload": {
+                "on": true,
+                "hue": 44000,
+                "bri": 252,
+                "sat": 255,
+		"effect": "none",
+                "pattern": [
+                  {"on":true},
+		  {"on":false},
+		  {"on":true, "sat": 50, "bri": 100},
+		  {"on":false},
+		  {"on":true, "sat": 0},
+		  {"on":false}
+		]
+	      },
+              "textcolor": "#ffffff",
+              "text": "Silver and Blue Christmas"
+            },
+            {
+              "color": "#000000", 
+              "key": "#000000", 
+	      "payload": {
+                "on": false
+	      },
+	      "textcolor": "#ffffff",
+              "text": "Off"
+            } 
+          ], 
+          "mechanism": "rest", 
+	  "targets": [
+		  "http://192.168.0.xxx/api/null/lights/1/state",
+		  "http://192.168.0.xxx/api/null/lights/1/state",
+		  "http://192.168.0.xxx/api/null/lights/1/state"
+	  ],
+          "name": "Light Bars"
+        }, 
+        {
+          "id": "upstairs_outside_light", 
+          "mechanism": "smartthings", 
+          "name": "Outside Light"
+        }
+      ], 
+      "longName": "Entertaining Area", 
+      "shortName": "3", 
+      "takesAVInputs": false
+    }
+  ], 
+  "inputPrefs": {
+    "ignoreSupplemental": [
+      "TUNER", 
+      "Rhapsody", 
+      "SiriusXM", 
+      "Pandora", 
+      "AirPlay", 
+      "Spotify"
+    ], 
+    "ignoreUnnamedPrimary": true
+  }, 
+  "inputs": [
+    {
+      "systemName": "HDMI1", 
+      "userName": "NexPlayer"
+    }, 
+    {
+      "systemName": "HDMI2", 
+      "userName": "PS4"
+    }, 
+    {
+      "systemName": "HDMI3", 
+      "userName": "XBone"
+    }, 
+    {
+      "systemName": "HDMI4", 
+      "userName": "XB360"
+    }, 
+    {
+      "systemName": "AV5", 
+      "userName": "PS2"
+    }, 
+    {
+      "systemName": "AV6", 
+      "userName": "N64"
+    }, 
+    {
+      "systemName": "Bluetooth"
+    }, 
+    {
+      "systemName": "Off"
+    }
+  ], 
+  "receiver": {
+    "address": "192.168.0.xxx", 
+    "port": 50000, 
+    "type": "yamaha"
+  }
+}
